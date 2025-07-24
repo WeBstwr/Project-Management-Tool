@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+:root {
+  --first-color: #2c3e50; /* Primary color for headers, text, borders */
+  --second-color: #1abc9c; /* Accent color for buttons, links, interactive elements */
+  --third-color: #ecf0f1; /* Background color for pages, cards, secondary elements */
+  --fourth-color: #e74c3c; /* Alert color for notifications, errors, emphasis */
+}
+
+/* Toast top-center positioning override */
+/* .toast__message--top-center {
+  top: 2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: auto !important;
+} */
