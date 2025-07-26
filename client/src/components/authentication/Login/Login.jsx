@@ -1,10 +1,9 @@
-import React from 'react'
-import './login.css'
+import React from 'react';
+import AuthForm from '../../AuthForm/AuthForm';
+import './login.css';
 
 function Login() {
-  return (
-    <div>Login</div>
-  )
+  return <AuthForm mode="login" />;
 }
 
-export default Login
+export default Login;

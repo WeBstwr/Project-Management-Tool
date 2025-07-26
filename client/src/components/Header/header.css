@@ -1,0 +1,112 @@
+.header {
+  background-color: var(--first-color);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.main-content-with-header {
+  margin-top: 80px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--third-color);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+a {
+  color: var(--third-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  margin: 0 0.1rem;
+}
+
+a.header-action {
+  background: var(--second-color);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-left: 0.2rem;
+}
+
+a.header-action:hover {
+  background: var(--third-color);
+  color: var(--second-color);
+}
+
+a.user-profile-link {
+  font-weight: 600;
+  color: var(--second-color);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--second-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+a.user-profile-link:hover {
+  background: var(--second-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+.welcome {
+  margin-right: 1rem;
+  color: var(--third-color);
+  font-size: 1rem;
+}
+
+.logout-btn {
+  background-color: var(--fourth-color);
+  color: var(--third-color);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.logout-btn:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  nav {
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}

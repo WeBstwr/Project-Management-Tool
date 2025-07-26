@@ -1,10 +1,8 @@
-import React from 'react'
-import './project.css'
+import React from 'react';
+import './project.css';
 
 function Project() {
-  return (
-    <div>Project</div>
-  )
+  return <div>Project Page</div>;
 }
 
-export default Project
+export default Project;
