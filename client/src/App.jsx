@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Project from "./pages/Project/Project";
 import Task from "./pages/Task/Task";
-import Notifications from "./pages/Notifications";
+import Notifications from "./pages/Notifications/Notifications";
 import AdminLayout from "./pages/admin/AdminLayout/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard/AdminDashboard";
 import AdminUsers from "./pages/admin/AdminUsers/AdminUsers";
