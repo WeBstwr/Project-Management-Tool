@@ -119,3 +119,113 @@
 .add-project-form button:hover {
     background: var(--first-color);
 }
+
+/* Task List Styles */
+.task-section {
+    margin-top: 2.5rem;
+}
+
+.task-section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--first-color);
+    margin-bottom: 1rem;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.task-card {
+    background: var(--third-color);
+    border: 1px solid var(--second-color);
+    border-radius: 6px;
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.task-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--first-color);
+}
+
+.task-meta {
+    font-size: 1rem;
+    color: #666;
+}
+
+.task-status {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--second-color);
+    margin-left: 0.5rem;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-btn {
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.task-btn:hover {
+    background: var(--first-color);
+}
+
+.add-task-form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.add-task-form input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--second-color);
+    border-radius: 6px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.add-task-form input:focus {
+    border: 1.5px solid var(--first-color);
+}
+
+.add-task-form button {
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-task-form button:hover {
+    background: var(--first-color);
+}
