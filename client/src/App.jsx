@@ -17,6 +17,7 @@ import AdminTasks from "./pages/admin/AdminTasks/AdminTasks";
 import AdminNotifications from "./pages/admin/AdminNotifications/AdminNotifications";
 import AdminProfile from "./pages/admin/AdminProfile/AdminProfile";
 import useAuth from './hooks/useAuth';
+import Profile from "./pages/Profile/Profile";
 
 function PrivateRoute({ children }) {
   const { isAuthenticated } = useAuth();
@@ -42,6 +43,7 @@ function App() {
             <Route path="/projects" element={<PrivateRoute><Project /></PrivateRoute>} />
             <Route path="/tasks" element={<PrivateRoute><Task /></PrivateRoute>} />
             <Route path="/notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
+            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
             {/* Admin Routes - Nested under /admin */}
             <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>
               <Route index element={<AdminDashboard />} />

@@ -5,7 +5,7 @@ const mockUsers = [
   { email: 'user@example.com', password: 'user123', role: 'user', name: 'Regular User' },
 ];
 
-export const useAuthStore = create((set) => ({
+export const useAuthStore = create((set, get) => ({
   user: null,
   isAuthenticated: false,
   role: null,
@@ -34,4 +34,42 @@ export const useAuthStore = create((set) => ({
     return false;
   },
   logout: () => set({ user: null, isAuthenticated: false, role: null }),
+
+  // Update profile (name/email) for the current user
+  updateProfile: ({ name, email }) => {
+    const currentUser = get().user;
+    if (!currentUser) return false;
+
+    // Find and update in mockUsers by previous email
+    const idx = mockUsers.findIndex((u) => u.email === currentUser.email);
+    if (idx === -1) return false;
+
+    // If email is changing, ensure it doesn't collide with an existing user
+    if (email !== currentUser.email) {
+      const emailExists = mockUsers.some((u, i) => i !== idx && u.email === email);
+      if (emailExists) return false;
+    }
+
+    mockUsers[idx] = { ...mockUsers[idx], name, email };
+
+    // Update store user, keep auth and role unchanged
+    set((state) => ({ ...state, user: { name, email } }));
+    return true;
+  },
+
+  // Change password for the current user by verifying currentPassword
+  changePassword: ({ currentPassword, newPassword }) => {
+    const currentUser = get().user;
+    if (!currentUser) return false;
+
+    const idx = mockUsers.findIndex((u) => u.email === currentUser.email);
+    if (idx === -1) return false;
+
+    if (mockUsers[idx].password !== currentPassword) {
+      return false;
+    }
+
+    mockUsers[idx].password = newPassword;
+    return true;
+  },
 }));

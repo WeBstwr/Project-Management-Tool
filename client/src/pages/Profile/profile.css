@@ -1,0 +1,210 @@
+/* Profile Page Styles */
+.profile-page {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.profile-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.profile-subtitle {
+  font-size: 1.8rem;
+  color: #666;
+}
+
+.profile-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(44, 62, 80, 0.08);
+  overflow: hidden;
+}
+
+/* Tab Navigation */
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  background: var(--third-color);
+  color: var(--first-color);
+}
+
+.tab-btn.active {
+  background: var(--second-color);
+  color: #fff;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 3rem;
+}
+
+.profile-section h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--first-color);
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--first-color);
+}
+
+.form-input {
+  padding: 1rem 1.5rem;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-input:focus {
+  border: 1.5px solid var(--second-color);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.submit-btn {
+  background: var(--second-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--first-color);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Account Actions */
+.account-actions {
+  padding: 2rem 3rem;
+  border-top: 1px solid #eee;
+  background: var(--third-color);
+}
+
+.account-actions h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--first-color);
+  margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.action-btn.danger {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.action-btn.danger:hover {
+  background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+  
+  .profile-title {
+    font-size: 2.4rem;
+  }
+  
+  .profile-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    padding: 1rem;
+  }
+  
+  .profile-section {
+    padding: 2rem;
+  }
+  
+  .account-actions {
+    padding: 1.5rem 2rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+} 

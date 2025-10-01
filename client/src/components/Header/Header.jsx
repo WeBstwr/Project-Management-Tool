@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './header.css';
 
@@ -24,11 +24,11 @@ function Header() {
         )}
         {isAuthenticated && role === 'admin' && (
           <>
-            <Link to="/admin/dashboard">Dashboard</Link>
-            <Link to="/admin/users">Users</Link>
-            <Link to="/admin/projects">Projects</Link>
-            <Link to="/admin/tasks">Tasks</Link>
-            <Link to="/admin/notifications">Notifications</Link>
+            <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? 'active' : undefined}>Dashboard</NavLink>
+            <NavLink to="/admin/users" className={({ isActive }) => isActive ? 'active' : undefined}>Users</NavLink>
+            <NavLink to="/admin/projects" className={({ isActive }) => isActive ? 'active' : undefined}>Projects</NavLink>
+            <NavLink to="/admin/tasks" className={({ isActive }) => isActive ? 'active' : undefined}>Tasks</NavLink>
+            <NavLink to="/admin/notifications" className={({ isActive }) => isActive ? 'active' : undefined}>Notifications</NavLink>
             <Link to="/admin/profile" className="user-profile-link">
               {user?.name || user?.email}
             </Link>
@@ -37,10 +37,10 @@ function Header() {
         )}
         {isAuthenticated && role === 'user' && (
           <>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/tasks">Tasks</Link>
-            <Link to="/notifications">Notifications</Link>
+            <NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : undefined}>Dashboard</NavLink>
+            <NavLink to="/projects" className={({ isActive }) => isActive ? 'active' : undefined}>Projects</NavLink>
+            <NavLink to="/tasks" className={({ isActive }) => isActive ? 'active' : undefined}>Tasks</NavLink>
+            <NavLink to="/notifications" className={({ isActive }) => isActive ? 'active' : undefined}>Notifications</NavLink>
             <Link to="/profile" className="user-profile-link">
               {user?.name || user?.email}
             </Link>
